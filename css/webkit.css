@@ -1,0 +1,45 @@
+/* ===== Zen Glass — store / community web pages ===== */
+:root {
+    --zg-card: rgba(0, 0, 0, 0.45);
+    --zg-panel: rgba(255, 255, 255, 0.03);
+    --zg-border: rgba(255, 255, 255, 0.07);
+}
+
+/* clear page backgrounds so acrylic shows */
+html, body,
+.responsive_page_frame,
+.responsive_page_content,
+.responsive_page_template_content,
+#global_header,
+.pagecontent,
+.apphub_background,
+.community_home_page,
+.community_home_page_content,
+.game_page_background,
+.game_background_glow,
+.page_content_ctn,
+.home_page_body_ctn,
+.profile_page,
+.profile_content,
+.profile_background_holder_content {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+.responsive_page_content_overlay { display: none !important; }
+
+/* cards */
+.apphub_Card,
+.apphub_Card .gradient,
+.game_area_purchase_game,
+.game_area_description,
+.block_content,
+.profile_customization,
+.profile_leftcol .profile_customization,
+.profile_rightcol > div {
+    background-color: var(--zg-card) !important;
+    border-radius: 6px;
+}
+.apphub_Card .gradient { background: linear-gradient(transparent, var(--zg-card)) !important; }
+
+/* store footer */
+#footer, footer { background: var(--zg-panel) !important; }

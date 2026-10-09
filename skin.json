@@ -1,0 +1,29 @@
+{
+    "name": "Zen Glass",
+    "description": "Zen-browser-style frosted glass. Needs the Window Styler (DWMX) plugin for real Acrylic blur. Tweak colors in css/glass.css :root.",
+    "author": "xplodingeggo",
+    "version": "1.1.0",
+    "github": {
+        "owner": "xplodingeggo",
+        "repo_name": "steam-zen-glass"
+    },
+    "tags": [
+        "Dark",
+        "Transparent",
+        "Acrylic"
+    ],
+    "Patches": [
+        {
+            "MatchRegexString": ".*",
+            "TargetCss": "css/glass.css"
+        },
+        {
+            "MatchRegexString": "https://store\\.steampowered\\.com(/.*)?",
+            "TargetCss": "css/webkit.css"
+        },
+        {
+            "MatchRegexString": "https://steamcommunity\\.com(/.*)?",
+            "TargetCss": "css/webkit.css"
+        }
+    ]
+}

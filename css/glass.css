@@ -1,0 +1,93 @@
+/* ===== Zen Glass for Steam — needs DWMX plugin (Acrylic) ===== */
+:root {
+    /* TWEAK THESE */
+    --zg-tint: rgba(10, 12, 26, 0.35);        /* whole-window tint over acrylic */
+    --zg-panel: rgba(255, 255, 255, 0.025);   /* sidebar, top/bottom bars */
+    --zg-card: rgba(0, 0, 0, 0.45);           /* cards, footers */
+    --zg-hover: rgba(255, 255, 255, 0.06);
+    --zg-select: rgba(255, 255, 255, 0.10);
+    --zg-input: rgba(255, 255, 255, 0.05);
+    --zg-border: rgba(255, 255, 255, 0.07);
+    --zg-popout: rgba(18, 20, 34, 0.92);      /* menus, dropdowns, dialogs */
+}
+
+/* Window root: clear so acrylic shows, then one tint layer */
+html, body { background: transparent !important; }
+.ForceOpaqueBackground,
+.ForceOpaqueBackground.Wrapper { background: var(--zg-tint) !important; }
+
+/* ---------- Main library window ---------- */
+.TopBar,
+.BottomBar,
+.GameListHomeAndSearch { background: var(--zg-panel) !important; }
+
+/* sidebar + content gradients */
+._3x1HklzyDs4TEjACrRO2tB.Container,
+.AppDetailsTransitionGroup,
+._3VQUewWB8g6Z5qB4C7dGFr.Container,
+.LibraryHome,
+.UpdatesContainer { background: transparent !important; }
+
+.TopBar, .GameListHomeAndSearch { border-bottom: 1px solid var(--zg-border) !important; }
+.BottomBar { border-top: 1px solid var(--zg-border) !important; }
+._3x1HklzyDs4TEjACrRO2tB.Container { border-right: 1px solid var(--zg-border) !important; }
+
+.MenuHeader, ._20QAC4WMXm8qFE8waUT5oo.Container { background: var(--zg-input) !important; }
+.GameListHomeAndSearch .Bar.Selected { background: var(--zg-select) !important; }
+.RecentGameFooter { background: var(--zg-card) !important; backdrop-filter: blur(12px); }
+.GameListHomeAndSearch .Bar { background: transparent !important; }
+.GameListHomeAndSearch .Bar:hover { background: var(--zg-hover) !important; }
+
+/* ---------- Game details page ---------- */
+.ScrollContainer.Glassy,
+._3lDczhulqraStjCitLYJ1K.Body { background: transparent !important; }
+.BackdropGlass { background: linear-gradient(rgba(0,0,0,0) 0%, var(--zg-tint) 120px) !important; }
+.PlayBar.Glassy { background: var(--zg-panel) !important; backdrop-filter: blur(16px); }
+.AppDetailsSectionContainer.Panel,
+.RightColumnSection.Panel,
+.PartnerEventMediumImage_Container.Panel,
+.PartnerEvent.Event,
+.PartnerEventPlaceholder { background: var(--zg-card) !important; border-radius: 8px; }
+.Highlight, .BadgeSection, .WorkshopHightlight, .HeaderStyles { background: var(--zg-panel) !important; }
+.PostTextEntryArea { background: var(--zg-input) !important; border: 1px solid var(--zg-border) !important; }
+.CommunityItem.Blank { background: var(--zg-card) !important; }
+.DialogButton.Secondary { background: var(--zg-hover) !important; }
+.DialogButton.Secondary:hover { background: var(--zg-select) !important; }
+
+/* ---------- Menus (popup windows) ---------- */
+.contextMenu,
+.contextMenuContents,
+.MenuPopup {
+    background: var(--zg-popout) !important;
+    border: 1px solid var(--zg-border) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+}
+.contextMenuItem:hover,
+.contextMenuItem.active { background: var(--zg-select) !important; }
+.contextMenuItemHR { background: var(--zg-border) !important; }
+
+/* ---------- Dialogs (settings, properties, modals) ---------- */
+.DialogContent,
+.DialogContentTransition { background: var(--zg-popout) !important; }
+.ModalPosition_Content { border-radius: 10px; overflow: hidden; }
+.DialogInput,
+._DialogInputContainer,
+.DialogDropDown { background: var(--zg-input) !important; border: 1px solid var(--zg-border) !important; }
+.DialogDropDown:hover { background: var(--zg-hover) !important; }
+
+/* ---------- Friends list window ---------- */
+.friendsui-container,
+.friendlist,
+.friendlist.collapsed,
+.friendlistListContainer,
+.FriendsListContent { background: transparent !important; }
+.friendStatusHover:hover { background: var(--zg-hover) !important; }
+
+/* ---------- Store / community browser chrome ---------- */
+.URLBar { background: var(--zg-panel) !important; border-bottom: 1px solid var(--zg-border) !important; }
+
+/* ---------- Downloads page ---------- */
+.DownloadsPage.Panel { background: transparent !important; }
+.DownloadsPage .SectionItem.Active { background: var(--zg-card) !important; }
+.DownloadsPage .HeroGradient { opacity: 0.5; }
