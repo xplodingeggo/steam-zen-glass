@@ -29,3 +29,7 @@ The main one is `--zg-tint`. Raise its last number to make the window darker, or
 
 - Steam's class names change with updates, so a panel might turn solid again after a Steam update. Open an issue with a screenshot and I'll take a look.
 - Only covers the desktop client. Big Picture isn't themed.
+
+## License
+
+[MIT](LICENSE). Use it, change it, and share your own versions, just keep the credit.
